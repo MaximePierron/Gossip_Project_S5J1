@@ -1,0 +1,5 @@
+<h3> Titre : <%= @gossip.title %> </h3>
+</br>
+<h4> Potin :</h4>
+<p> <%= @gossip.content %></p>
+<%= link_to "En savoir plus sur l'auteur du potin", user_path(@author.id), class: "btn btn-primary" %>

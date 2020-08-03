@@ -1,0 +1,20 @@
+<h1 class="text-center"><%= params[:first_name] %>, Bienvenue à Jurassic..</h1>
+<h3 class="text-center">euh non me gourre d'endroit..</h3>
+<h1 class="text-center">Bienvenue sur The Gossip Project !</h1>
+
+<div class="row">
+
+<% @gossips.each do |gossip| %>
+    <div class="card col-sm-3 text-center">
+        <div class="card-header">
+            <p>potin n°<%= gossip.id %></p>
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">Auteur : <%= gossip.user.first_name %></h5>
+            <p class="card-text">Titre : <%= gossip.title %></p>
+            <%= link_to "En savoir plus", gossip_path(gossip.id), class: "btn btn-primary" %>
+        </div>
+    </div>
+<% end %>
+
+</div>
